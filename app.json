@@ -1,0 +1,12 @@
+{
+  "name": "robot-dating-site",
+  "displayName": "robot-dating-site",
+  "expo": {
+    "name": "robot-dating-site",
+    "slug": "robot-dating-site",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
