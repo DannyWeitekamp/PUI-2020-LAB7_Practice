@@ -72,9 +72,11 @@ const styles = StyleSheet.create({
   },
   inner_page: {
     backgroundColor: '#4a126b',
-    top: 70
+    top: 70,
+
     //TODO 1A: Use flexbox to make the items arranged in rows that wrap around
-    //TODO 1B: Use flexbox to make the items stretch to fill out the space
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   }
 
 });
@@ -88,9 +90,11 @@ const profile_styles = StyleSheet.create({
     borderRadius: 10,
     height:270,
 
-    //TODO 1C: Replace the fixed with constrained widths so they don't 
-    //  stretch too much or too little
-    width: 250,
+    //TODO 1B: Turn on flex: 1 so the items can stretch and replace the fixed 
+    //  width with constrained widths so they don't stretch too much or too little.
+    flex: 1,
+    minWidth: 200,
+    maxWidth: 300,
   },
   image: {
     width: 200,
@@ -108,7 +112,7 @@ const profile_styles = StyleSheet.create({
 
 const header_styles = StyleSheet.create({
   header: {
-    position: "fixed",
+    position: "absolute",
     top: 0,
     width: "100%",
     flexDirection:'row',
@@ -142,6 +146,5 @@ const header_styles = StyleSheet.create({
     tintColor:'white',
     width:60,
     height:60,
-    // margin:5
   },
 })
