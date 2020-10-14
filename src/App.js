@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 let hand = require("./images/hand.png")
 
@@ -22,13 +22,11 @@ const data = [
 
 const Container = (props) => {
   let {profile} = props
-  const [hover,setHover] = useState(false);
-  console.log(hover)
+  //TODO 2: Use the useState hook, and the events onMouseEnter and onMouseLeave 
+  //  to dynamically add a style if the mouse is hovering over one of the containers
+  //TODO 3: Make these into buttons by changing a View to a TouchableOpacity
   return (
-    <View style={[profile_styles.brief,hover && {opacity:.8}]} 
-          onMouseEnter={(e) => setHover(true) }
-          onMouseLeave={(e) => setHover(false) }
-    > 
+    <View style={profile_styles.brief}> 
       <Image source={profile.image} style={profile_styles.image}/> 
       <Text style={profile_styles.text}>{profile.name}</Text>
     </View>
