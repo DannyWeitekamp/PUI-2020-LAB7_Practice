@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 let hand = require("./images/hand.png")
 
@@ -25,13 +25,14 @@ const Container = (props) => {
   const [hover,setHover] = useState(false);
   console.log(hover)
   return (
-    <View style={[profile_styles.brief,hover && {opacity:.8}]} 
+    <TouchableOpacity style={[profile_styles.brief,hover && {opacity:.8}]} 
           onMouseEnter={(e) => setHover(true) }
           onMouseLeave={(e) => setHover(false) }
+          onPress={()=>{}}
     > 
       <Image source={profile.image} style={profile_styles.image}/> 
       <Text style={profile_styles.text}>{profile.name}</Text>
-    </View>
+    </TouchableOpacity>
   )  
 }
 
