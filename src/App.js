@@ -107,7 +107,7 @@ const profile_styles = StyleSheet.create({
 
 const header_styles = StyleSheet.create({
   header: {
-    position: "fixed",
+    position: "absolute",
     top: 0,
     width: "100%",
     flexDirection:'row',
