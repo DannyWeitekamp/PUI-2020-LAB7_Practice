@@ -25,6 +25,7 @@ const Container = (props) => {
   //TODO 2: Use the useState hook, and the events onMouseEnter and onMouseLeave 
   //  to dynamically add a style if the mouse is hovering over one of the containers
   //TODO 3: Make these into buttons by changing a View to a TouchableOpacity
+  //  just using console.log('pressed') is fine as a callback
   return (
     <View style={profile_styles.brief}> 
       <Image source={profile.image} style={profile_styles.image}/> 
